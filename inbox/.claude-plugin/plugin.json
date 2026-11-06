@@ -1,0 +1,10 @@
+{
+  "name": "inbox",
+  "version": "0.1.0",
+  "description": "Project-bound inbox for questions Claude asks while it keeps working; /inbox to read, r to reply.",
+  "author": {
+    "name": "Emre Erkan"
+  },
+  "types": "./types/index.d.ts",
+  "license": "MIT"
+}

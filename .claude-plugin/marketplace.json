@@ -1,0 +1,22 @@
+{
+  "name": "emre-mods",
+  "owner": {
+    "name": "Emre Erkan",
+    "url": "https://github.com/emreerkan"
+  },
+  "plugins": [
+    {
+      "name": "gh-helper",
+      "source": "./gh-helper",
+      "description": "Side pane with GitHub pings (a routing label) on top and the In progress items and open PRs of a GitHub Project below"
+    },
+    {
+      "name": "inbox",
+      "source": "./inbox",
+      "description": "Project-bound inbox for questions Claude asks while it keeps working; /inbox to read, r to reply."
+    }
+  ],
+  "metadata": {
+    "description": "Claude Code mods by Emre Erkan: an inbox for Claude's questions and a GitHub side pane."
+  }
+}
