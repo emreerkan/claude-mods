@@ -16,8 +16,6 @@ Type "/gh-helper emreerkan/claude-mods-demo to-claude 2"
 Sleep 800ms
 Enter
 Sleep 7s
-Type "r"
-Sleep 5s
 Hide
 Ctrl+C
 Ctrl+C
