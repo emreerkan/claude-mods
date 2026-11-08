@@ -2,9 +2,7 @@
 
 A project-bound inbox for the questions Claude asks while it keeps working.
 
-<!-- Screen recording placeholder. Save the GIF as ../docs/media/inbox.gif and uncomment:
 ![inbox pane](../docs/media/inbox.gif)
--->
 
 When Claude needs a decision from you but has other work running (subagents, workflows, pending tasks), a question in prose scrolls away. This mod gives Claude an `inbox_ask` tool instead: the question lands in an inbox pane with a subject and a self-contained body, and Claude carries on with work that doesn't depend on the answer.
 

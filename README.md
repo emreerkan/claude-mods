@@ -9,17 +9,13 @@ Small mods that make long Claude Code sessions easier to steer. Install one, bot
 
 ## inbox
 
-<!-- Screen recording placeholder. Save the GIF as docs/media/inbox.gif and uncomment:
 ![inbox pane with an open question and the ideas list](docs/media/inbox.gif)
--->
 
 Claude is running three subagents and needs you to pick between two migration strategies. Without the mod, that question scrolls away under tool output. With it, the question lands in a pane with a subject line and enough context to answer later, even from another session, and Claude carries on with the work that doesn't depend on it. [More →](inbox/README.md)
 
 ## gh-helper
 
-<!-- Screen recording placeholder. Save the GIF as docs/media/gh-helper.gif and uncomment:
 ![gh-helper pane with pings, In progress and open PRs](docs/media/gh-helper.gif)
--->
 
 Label an issue `to-claude` and it shows up beside your session. Below it: what your team has In progress on the project board, and the open PRs. Refreshes every 5 minutes through the `gh` CLI. [More →](gh-helper/README.md)
 

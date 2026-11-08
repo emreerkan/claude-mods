@@ -2,9 +2,7 @@
 
 A Claude Code side pane that shows the GitHub work waiting for you.
 
-<!-- Screen recording placeholder. Save the GIF as ../docs/media/gh-helper.gif and uncomment:
 ![gh-helper pane](../docs/media/gh-helper.gif)
--->
 
 The idea: you pick a **routing label** (for example `to-claude`). Anyone on the team who wants something handled in your Claude sessions puts that label on an issue or PR. Those items are your **pings**, and they sit at the top of the pane until they are closed, merged or unlabeled.
 
