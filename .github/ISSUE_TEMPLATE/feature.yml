@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest a change to an existing mod
+labels: [enhancement]
+body:
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Mod
+      options: [inbox, gh-helper]
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you'd like instead

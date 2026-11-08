@@ -1,5 +1,5 @@
 {
-  "name": "emre-mods",
+  "name": "claude-mods",
   "owner": {
     "name": "Emre Erkan",
     "url": "https://github.com/emreerkan"
@@ -8,7 +8,7 @@
     {
       "name": "gh-helper",
       "source": "./gh-helper",
-      "description": "Side pane with GitHub pings (a routing label) on top and the In progress items and open PRs of a GitHub Project below"
+      "description": "Side pane with GitHub pings (issues/PRs with a routing label), the In progress items of a GitHub Project, and open PRs"
     },
     {
       "name": "inbox",
@@ -17,6 +17,6 @@
     }
   ],
   "metadata": {
-    "description": "Claude Code mods by Emre Erkan: an inbox for Claude's questions and a GitHub side pane."
+    "description": "Claude Code mods by Emre Erkan: an inbox for the questions Claude asks while it keeps working, and a GitHub side pane."
   }
 }

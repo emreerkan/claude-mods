@@ -1,0 +1,39 @@
+name: Bug report
+description: Something in a mod doesn't work as documented
+labels: [bug]
+body:
+  - type: dropdown
+    id: mod
+    attributes:
+      label: Mod
+      options: [inbox, gh-helper]
+    validations:
+      required: true
+  - type: input
+    id: claude-version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: Mod version
+      description: Shown by `claude plugin list`
+  - type: input
+    id: os
+    attributes:
+      label: OS and terminal
+      placeholder: macOS 15, iTerm2
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: For gh-helper, include the `/gh-helper` arguments (redact private org names if needed).
