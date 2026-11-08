@@ -2,7 +2,7 @@
 
 Each mod is versioned on its own. Tags use the form `<mod>--v<version>`.
 
-## Unreleased
+## gh-helper 0.4.1 · inbox 0.1.1
 
 - gh-helper: the In progress header counts epics, matching the `/gh-helper` summary.
 - inbox: `/ideas` with no ideas in the project says so instead of opening an empty pane, like `/inbox`.
