@@ -76,6 +76,15 @@ test('asks GitHub for the In progress items only, never the whole board', async 
   expect(query).toContain('status:\\"In progress\\"')
 })
 
+test('the In progress header counts epics, as the command does', async ($, on) => {
+  world(on)
+  const { text } = await $.command.run({ command: 'gh-helper', args: 'acme to-claude 3', ...typed })
+  expect(text).toContain('2 in progress')
+  const pane = await mountPane($)
+  expect(await pane.find({ text: 'In progress · project 3 (2)' })).toBeDefined()
+  expect(await pane.find({ text: '+1 epic in progress' })).toBeDefined()
+})
+
 test('a fresh shared result is reused instead of fetched again', async ($, on) => {
   const cache = {
     key: 'acme|to-claude|3', checkedAt: new Date(NOW - 60 * 1000).toISOString(), rateLimitedUntil: null,

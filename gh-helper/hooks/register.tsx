@@ -423,7 +423,8 @@ export const register: Register = on => {
 
     const pingCount = pings.items.filter(item => !isDismissed(marks, item)).length
     const doneCount = pings.items.length - pingCount
-    const inProgressCount = inProgress.items.filter(item => !item.isEpic).length
+    // Epics included, as in the command's summary; the list shows them as "+N epics".
+    const inProgressCount = inProgress.items.length
     const limited = rateLimitedUntil !== null && Date.parse(rateLimitedUntil) > now
 
     const header = (
