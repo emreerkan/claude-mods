@@ -4,6 +4,7 @@ Each mod is versioned on its own. Tags use the form `<mod>--v<version>`.
 
 ## Unreleased
 
+- inbox: `/ideas` with no ideas in the project says so instead of opening an empty pane, like `/inbox`.
 - Marketplace renamed from `emre-mods` to `claude-mods`. Claude Code keeps each plugin's data in a file named after its marketplace, so copy your open questions and gh-helper settings to the new name first (uninstalling keeps the old files):
 
   ```sh

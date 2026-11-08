@@ -19,7 +19,7 @@ claude plugin install inbox@claude-mods
 
 ## Use
 
-- `/inbox` opens the pane: open questions above, ideas below. `/ideas` opens it on the ideas.
+- `/inbox` opens the pane: open questions above, ideas below. `/ideas` opens it on the ideas. With nothing to show, either command says so instead of opening an empty pane.
 - Open items are bound to the project (the git root, or the nearest folder with `.claude/` or `CLAUDE.md`), so a question asked in one session can be answered in a later one.
 - The status line shows the number of open questions and open ideas (`inbox 2 · ideas 3`).
 

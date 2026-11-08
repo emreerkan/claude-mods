@@ -236,6 +236,29 @@ describe('inbox', () => {
     expect(seen.statuses.at(-1)).toBe('inbox 1 · ideas 1')
   })
 
+  test('/inbox and /ideas say so and open no pane when they have nothing to show', async ($, on) => {
+    const typed = { args: '', origin: { kind: 'composer' as const }, presentation: { isFullscreen: false, columns: 160 } }
+    const seen = engine(on)
+    await $.session.start({ cwd: '/tmp/proj-empty', surface: 'terminal', isInteractive: true })
+
+    const inbox = await $.command.run({ command: 'inbox', ...typed })
+    expect(inbox.text).toContain('empty')
+    const ideas = await $.command.run({ command: 'ideas', ...typed })
+    expect(ideas.text).toContain('No ideas')
+    expect(seen.opens).toHaveLength(0)
+
+    // A question alone still leaves /ideas with nothing to show.
+    await $.tool.call({ tool: ASK, subject: 'Q', body: '' })
+    const stillNone = await $.command.run({ command: 'ideas', ...typed })
+    expect(stillNone.text).toContain('No ideas')
+    expect(seen.opens).toHaveLength(0)
+
+    await $.tool.call({ tool: IDEA, title: 'Digest', description: '' })
+    const opened = await $.command.run({ command: 'ideas', ...typed })
+    expect(opened.text).toContain('1 open idea')
+    expect(seen.opens).toHaveLength(1)
+  })
+
   test('an older store record without ideas still loads', async ($, on) => {
     const seen = engine(on)
     seen.store.set('project:/tmp/proj', {

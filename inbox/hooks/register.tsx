@@ -563,9 +563,11 @@ export const register: Register = on => {
 
   on('command.run', { command: 'ideas' }, async $ => {
     await sync($)
+    const kept = await read($, ideas)
+    if (kept.length === 0) return { text: 'No ideas for this project yet. Say "idea: ..." and Claude records it.' }
     await update($, section, () => 'ideas')
     await openPane($, true)
-    return { text: `Ideas opened: ${openIdeas(await read($, ideas)).length} open idea(s).` }
+    return { text: `Ideas opened: ${openIdeas(kept).length} open idea(s).` }
   })
 
   // The transcript row of an inbox_ask call reads as the question itself, not
